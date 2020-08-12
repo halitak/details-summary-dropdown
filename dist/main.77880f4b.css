@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.375em 0.75em;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+}
+
+details.dropdown {
+  display: inline-block;
+  position: relative;
+}
+details.dropdown summary::-webkit-details-marker {
+  display: none;
+}
+details.dropdown summary {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+details.dropdown[open] summary {
+  cursor: default;
+}
+details.dropdown[open] summary::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+details.dropdown > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 99;
+  margin-top: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+details.dropdown > ul::before, details.dropdown > ul::after {
+  content: "";
+  position: absolute;
+}
+details.dropdown > ul::before {
+  left: 9px;
+  top: -16px;
+  border: 8px solid transparent;
+  border-bottom-color: #aaa;
+}
+details.dropdown > ul::after {
+  left: 10px;
+  top: -14px;
+  border: 7px solid transparent;
+  border-bottom-color: #fff;
+}
+details.dropdown > ul a {
+  padding: 0.375em 0.75em;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+details.dropdown > ul a:hover {
+  background-color: #ddd;
+}
